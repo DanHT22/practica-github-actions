@@ -14,18 +14,6 @@ jobs:
 
     # Pasos que se ejecutan en el job
     steps:
-      - name: "Pull de código"
-        uses: actions/checkout@v2
-
-      - name: "Instalación de Node.js"
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      - name: "Instalación de dependencias"
-        run: npm install
-
-      - name: "Ejecución de pruebas"
-        run: npm test
-
+      - run: echo "Hola mundo desde un workflow de github"
+      - run: echo "Este es un ejemplo de un workflow de github"
 
