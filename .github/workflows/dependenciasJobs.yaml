@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        run: cat hola error.txt
+        run: echo "Hola mundo"
   
   segundo_job:
     #Condicionales y contextos
