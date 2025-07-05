@@ -10,16 +10,16 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        uses: echo "Hola mundo"
+        run: echo "Hola mundo"
   
-  segudno_job:
+  segundo_job:
     #Directivas de los jobs
     needs: primer_job
     runs-on: ubuntu-latest
 
     steps:
       - name: Hola Mundo
-        uses: echo "Hola mundo del segundo Job"
+        run: echo "Hola mundo del segundo Job"
 
 
 
