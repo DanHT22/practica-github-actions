@@ -14,6 +14,12 @@ jobs:
 
     # Pasos que se ejecutan en el job
     steps:
-      - run: echo "Hola mundo desde un workflow de github"
-      - run: echo "Este es un ejemplo de un workflow de github"
+      - name: "Checkout"
+        uses: actions/checkout@v3
+
+      - name: "Instalar Node.js"
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
 
