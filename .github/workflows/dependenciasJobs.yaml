@@ -10,10 +10,11 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        run: echo "Hola mundo"
+        run: cat hola error.txt
   
   segundo_job:
-    #Directivas de los jobs
+    #Condicionales y contextos
+    if: ${{ github.ref == 'refs/heads/master'}}
     needs: primer_job
     runs-on: ubuntu-latest
 
