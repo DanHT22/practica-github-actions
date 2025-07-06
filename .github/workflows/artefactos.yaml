@@ -5,11 +5,11 @@ on:
       branches: ["master"]
 
 jobs:
-  primer_job:
+  job_artefactos:
     runs-on: ubuntu-latest
 
     steps:
-    
+
       - name: Generar archivo
         run: |
           echo "Archivo de prueba de almacenamiento de información 
