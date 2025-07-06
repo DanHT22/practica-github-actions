@@ -21,5 +21,18 @@ jobs:
           name: archivo-artefacto-log
           path: test.log
 
+  job_consumo_artefacto:
+    runs-on: ubuntu-latest
 
+    steps:
+    
+      - name: Descargar artefacto
+        uses: actions/download-artifact@v4
+        with:
+          name: archivo-artefacto-log
 
+      - name: Listar archivos
+        run: ls -li
+      
+      - name: Verificar contenido del archivo
+        run: cat archivo-artefacto-log/test.log
