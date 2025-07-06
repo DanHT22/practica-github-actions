@@ -22,7 +22,6 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        run: echo "Hola mundo del segundo Job"
         run: echo "contexto ${{ github.ref }}"
 
 
