@@ -1,0 +1,18 @@
+name: Estrategia de Workflow (Matrix)
+
+on:
+  push:
+      branches: ["master"]
+
+jobs:
+  job_strategy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["version1", ""version2", "version3"]
+    
+    steps:
+
+      - name: Imprimir version 1
+        run: echo "${{ matrix.message}}"
+
