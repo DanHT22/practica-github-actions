@@ -12,7 +12,6 @@ jobs:
       VARIABLE_1: "Hola mundo variable de enotorno"
 
     steps:
-    
       - name: Hola Mundo
         run: echo "$VARIABLE_1"
 
@@ -35,6 +34,12 @@ jobs:
       - name: Hola Mundo
         run: echo "contexto ${{ github.ref }}"
 
+      - name: action con parametros
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
 
 
+          
 
