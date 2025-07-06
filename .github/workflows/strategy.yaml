@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        message: ["version1", ""version2", "version3"]
+        message: ["version1", "version2", "version3"]
     
     steps:
 
       - name: Imprimir version 1
-        run: echo "${{ matrix.message}}"
+        run: echo "${{ matrix.message }}"
 
