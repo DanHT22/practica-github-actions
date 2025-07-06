@@ -10,6 +10,10 @@ jobs:
     env: 
       # Variables de entorno
       VARIABLE_1: "Hola mundo variable de enotorno"
+    
+    #outputs
+    outputs:
+      output_salida: ""
 
     steps:
       - name: Hola Mundo

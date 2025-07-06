@@ -1,0 +1,26 @@
+name: Invocación de Artefactos
+
+on:
+  push:
+      branches: ["master"]
+
+jobs:
+  primer_job:
+    runs-on: ubuntu-latest
+
+  steps:
+
+    - name: Generar archivo
+      run: |
+        echo "Archivo de prueba de almacenamiento de información 
+              mejor conocidos como artefcatos" >> test.log
+
+    - name: Generar artefacto
+      uses: actions/upload-artifact@v4
+      with:
+        name: archivo-artefacto-log
+        path: test.log
+
+
+
+        
