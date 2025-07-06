@@ -8,11 +8,22 @@ jobs:
   primer_job:
     runs-on: ubuntu-latest
     env: 
+      # Variables de entorno
       VARIABLE_1: "Hola mundo variable de enotorno"
 
     steps:
+    
       - name: Hola Mundo
         run: echo "$VARIABLE_1"
+
+      - name: Listar archivos
+        run: ls -li
+      
+      - name: Action
+        uses: actions/checkout@v4
+
+      - name: Listar archivos despues de la accion
+        run: ls -li
   
   segundo_job:
     #Condicionales y contextos
