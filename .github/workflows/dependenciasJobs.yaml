@@ -7,10 +7,13 @@ on:
 jobs:
   primer_job:
     runs-on: ubuntu-latest
+    env: 
+      VARIABLE_1: "Hola mundo variable de enotorno"
 
     steps:
       - name: Hola Mundo
         run: echo "Hola mundo"
+        run: echo "$VARIABLE_1"
   
   segundo_job:
     #Condicionales y contextos
@@ -21,6 +24,7 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola mundo del segundo Job"
+        run: echo "contexto ${{ github.ref }}"
 
 
 
