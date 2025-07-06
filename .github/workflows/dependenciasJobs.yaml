@@ -23,6 +23,13 @@ jobs:
 
       - name: Listar archivos despues de la accion
         run: ls -li
+
+      - name: github output
+        id: step_github_output
+        run: echo "variable_de_salida=Hola mundo" >> $GITHUB_OUTPUT
+
+      - name: Obtener output de github
+        run: echo "${{ steps.step_github_output.outputs.variable_de_salida }}"
   
   segundo_job:
     #Condicionales y contextos
@@ -41,6 +48,9 @@ jobs:
       
       - name: Verificar versión de Node.js
         run: node -v
+
+
+
 
 
 
